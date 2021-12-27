@@ -21,7 +21,7 @@ const forecast=(lat,log,callback)=>{
         }
         else{
             callback(undefined,{
-                data:`temperature is ${res.body.current.temperature} but it feel like ${res.body.current.feelslike}`,
+                data:`${res.body.current.weather_description[0]} it is currently  ${res.body.current.temperature} but it feel like ${res.body.current.feelslike} degrees out The humadity is ${res.body.current.humidity}%`,
             })
         }
     })
